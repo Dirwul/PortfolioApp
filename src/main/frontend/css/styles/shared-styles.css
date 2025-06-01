@@ -1,0 +1,138 @@
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Шапка */
+.header {
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 16px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.header-link:hover {
+    color: #f0c674;/*#007bff;*/
+}
+
+.header-link::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    color: #777;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.header-link:last-child::after {
+    content: "";
+}
+
+/* main-content */
+.page-container {
+    width: 90%;
+    max-width: 1200px;
+    /*background-color: #fff; /*doesn't make sense*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Обо мне */
+.about-section {
+    display: flex;
+    align-items: start;
+    margin-left: 5%;
+    margin-right: 5%;
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    font-size: 18px;
+    color: #555;
+    margin-right: 40px;
+    line-height: 1.5;
+    width: 45%;
+}
+
+.hard-skills {
+    font-size: 14px;
+    color: #666;
+    width: 25%;
+    margin-top: 0;
+    vertical-align: top;
+}
+
+/* Проекты */
+.projects-section {
+    margin-left: 5%;
+    width: 90%;
+}
+
+.tab-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд */
+    gap: 16px; /* Расстояние между карточками */
+    padding: 16px;
+}
+
+.project-card-link {
+    display: block;
+    text-decoration: none;
+    color: #f0c674;
+}
+
+.project-card {
+    border: 2px solid #d58a94; /*#e0e0e0;*/
+    border-radius: 12px;
+    padding: 16px;
+    background-color: #f9f9f9;/*#f9f9f9;*/
+    min-height: 150px;
+    box-shadow: 0 4px 6px rgba(213,138,148, 0.25);
+    transition: transform 0.2s, box-shadow 0.2s; /* Анимация при наведении */
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    color: #f0c674;
+    box-shadow: 0 6px 12px rgba(213,138,148, 0.5);
+}
+
+.project-card h5 {
+    margin: 0 0 8px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.project-card span {
+    color: #555;
+}

@@ -1,0 +1,8 @@
+vaadin:
+  launch-browser: true
+  #frontend:
+    #folder: src/main/resources/frontend
+
+spring:
+  application:
+    name: PortfolioApp
