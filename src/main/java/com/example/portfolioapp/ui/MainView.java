@@ -52,14 +52,14 @@ public class MainView extends AppLayout {
 		aboutSection.addClassName("about-section");
 
 		// avatar
-		Image profileImage = new Image("/images/ava.jpg", "Фото профиля");
+		Image profileImage = new Image("/images/img.jpg", "Фото профиля");
 		profileImage.addClassName("profile-image");
 
 		// desc
 		Div description = new Div();
 		description.addClassName("about-text");
 		description.add(new Span("Привет! Это маленькое портфолио с моими проектами " +
-			"и небольшой информацией о том, чем я занимаюсь."),
+			"и информацией о том, чем я занимаюсь. "),
 			new Span("В шапке профиля можно найти ссылки на соцсети, а снизу находятся проекты и работы в вузе.")
 		);
 
@@ -67,7 +67,9 @@ public class MainView extends AppLayout {
 		Div skills = new Div();
 		skills.addClassName("hard-skills");
 		skills.add(new H4("Cтек:"));
-		skills.add(new Span("Java, Spring, Postgres, MongoDB, JUnit, Testcontainers, Vaadin, Docker, Kafka, CI/CD"));
+		skills.add(new Span("Java 21, Spring & Spring Boot, Vaadin, Jackson, Log4j, Spring WebFlux," +
+			" REST API, HTTP, WebSockets, JPA, JDBC, Hibernate, PostgreSQL, MongoDB, Redis, JUnit, Mockito, JMH" +
+			" GitLab CI/CD, Jenkins, Docker, Maven, Git"));
 
 		aboutSection.add(profileImage, description, skills);
 		return aboutSection;
